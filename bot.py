@@ -9,8 +9,27 @@ import time
 import random
 from datetime import datetime, timedelta
 import logging
+from colorama import *
 from typing import Dict, Optional
 import sys
+
+# 版权
+def show_copyright():
+    """展示版权信息"""
+    copyright_info = f"""{Fore.CYAN}
+    *****************************************************
+    *           X:https://x.com/ariel_sands_dan         *
+    *           Tg:https://t.me/sands0x1                *
+    *           Copyright (c) 2025                      *
+    *           All Rights Reserved                     *
+    *****************************************************
+    """
+    {Style.RESET_ALL}
+    print(copyright_info)
+    print('=' * 50)
+    print(f"{Fore.GREEN}申请key: https://661100.xyz/ {Style.RESET_ALL}")
+    print(f"{Fore.RED}联系Dandan: \n QQ:712987787 QQ群:1036105927 \n 电报:sands0x1 电报群:https://t.me/+fjDjBiKrzOw2NmJl \n 微信: dandan0x1{Style.RESET_ALL}")
+    print('=' * 50)
 
 # 导入验证码解决器
 try:
@@ -291,6 +310,8 @@ class UomiFaucetBot:
 
 def main():
     """主函数"""
+    show_copyright()
+    time.sleep(10)
     bot = UomiFaucetBot()
     
     if len(sys.argv) > 1 and sys.argv[1] == '--once':
